@@ -142,8 +142,8 @@ public class ExternalMemorySort {
 			 BufferedReader in = new BufferedReader(new FileReader("E:\\test\\externalSorted.txt"));
 		     String line = "";
 		     line = in.readLine();		/*The externalSorted file would contain the repeating IP addresses 
-		     								            one after the other. Same IP address is read until it is repeated and thus 
-		     								            the corresponding count is obtained and that is populated to a heap */
+		     					one after the other. Same IP address is read until it is repeated and thus 
+		     					the corresponding count is obtained and that is populated to a heap */
 		        while ((line != null)) {
 		        	String IP = line;
 		        	int counter = 1;
@@ -161,7 +161,7 @@ public class ExternalMemorySort {
 			}
 				
 				
-			final String[] topK = new String[heapTop];
+		    final String[] topK = new String[heapTop];
 		    int i = 0;
 		    while (topKHeap.size() > 0) {
 		        WordFreq result = new WordFreq(topKHeap.remove());
