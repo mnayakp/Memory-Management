@@ -137,14 +137,14 @@ public class ExternalMemorySort {
 		// A min heap of size 10 is being maintained in order to obtain the top 10 IP addresses and the corresponding count
 		public static void Heapify() throws IOException{
 
-			 int heapTop = 3;
-			 final PriorityQueue<WordFreq> topKHeap = new PriorityQueue<WordFreq>(heapTop);
-			 BufferedReader in = new BufferedReader(new FileReader("E:\\test\\externalSorted.txt"));
+		     int heapTop = 3;
+		     final PriorityQueue<WordFreq> topKHeap = new PriorityQueue<WordFreq>(heapTop);
+		     BufferedReader in = new BufferedReader(new FileReader("E:\\test\\externalSorted.txt"));
 		     String line = "";
 		     line = in.readLine();		/*The externalSorted file would contain the repeating IP addresses 
-		     								            one after the other. Same IP address is read until it is repeated and thus 
-		     								            the corresponding count is obtained and that is populated to a heap */
-		        while ((line != null)) {
+		     					one after the other. Same IP address is read until it is repeated and thus 
+		     					the corresponding count is obtained and that is populated to a heap */
+		      while ((line != null)) {
 		        	String IP = line;
 		        	int counter = 1;
 		        	while((line = in.readLine()) != null && line.compareTo(IP)== 0)
@@ -158,10 +158,10 @@ public class ExternalMemorySort {
 		            topKHeap.remove();
 		            topKHeap.add(new WordFreq(IP, counter));
 		        }
-			}
+		     }
 				
 				
-			final String[] topK = new String[heapTop];
+		    final String[] topK = new String[heapTop];
 		    int i = 0;
 		    while (topKHeap.size() > 0) {
 		        WordFreq result = new WordFreq(topKHeap.remove());
