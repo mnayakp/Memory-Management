@@ -7,6 +7,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+/* Few assumptions were made - The status codes were not validated if it was 200 always ; Only the IP addresses are considered and 
+the corressponding timestamp is not kept track of. For testing purposes the size of the file was kept to minimal.*/
+
 //Word and corresponding frequency assigning using constructors later used in the heap operations
 final class WordFreq implements Comparable<WordFreq> {
     String word;
