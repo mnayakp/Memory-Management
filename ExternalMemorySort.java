@@ -29,9 +29,9 @@ final class WordFreq implements Comparable<WordFreq> {
 /* External Sorting Technique is used as the file in being read in this case is really huge */
 
 public class ExternalMemorySort {	
-		static int N = 10;    /* size of our log file in the disk. A very minimal size is used for testing purposes. 
+		static int N = 2000000;    /* size of our log file in the disk. A very minimal size was used for testing purposes. 
 								          This could be assigned a huge number to handle large files. */
-		static int M = 2;     /* size of temporary buffer being used. A very minimal size is used for testing purposes.
+		static int M = 100000;     /* size of temporary buffer being used. A very minimal size was used for testing purposes.
 								          This could be assigned a huge number but a number lesser than N */
 		
 		public static void externalMemorySort(String filename){
@@ -116,8 +116,6 @@ public class ExternalMemorySort {
 			    String t = brs[minFile].readLine();
 			    if (t != null)
 			     topNums[minFile] = t;
-			    else
-			     topNums[minFile] = String.valueOf(Integer.MAX_VALUE);
 			    
 			   }
 			   for (i = 0; i < slices; i++)
@@ -137,7 +135,7 @@ public class ExternalMemorySort {
 		// A min heap of size 10 is being maintained in order to obtain the top 10 IP addresses and the corresponding count
 		public static void Heapify() throws IOException{
 
-		     int heapTop = 3;
+		     int heapTop = 10;
 		     final PriorityQueue<WordFreq> topKHeap = new PriorityQueue<WordFreq>(heapTop);
 		     BufferedReader in = new BufferedReader(new FileReader("E:\\test\\externalSorted.txt"));
 		     String line = "";
